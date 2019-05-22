@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>jAlendar - Premium Calendar Tool</title>
+
+<link rel="stylesheet" href="style/documentation.css" type="text/css" />
+<link rel="stylesheet" href="style/jalendar.css" type="text/css" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script><!--jQuery-->
+<script type="text/javascript" src="js/documentation-jquery.js"></script>
+<script type="text/javascript" src="js/jalendar.js"></script>
+
+<script type="text/javascript">
+$(function () {
+    $('#myId').jalendar({
+        customDay: '2017/12/01',  // Format: Year/Month/Day
+        color: '#ed145a', // Unlimited Colors
+        lang: 'EN' // Format: English — 'EN', Türkçe — 'TR'
+    });
+    $('#myId2').jalendar({
+        customDay: '2016/02/29',
+        color: '#023447',
+        lang: 'ES'
+    });
+    $('#myId3').jalendar();
+});
+</script>
+
+</head>
+
+<body>
+
+<a href="#" class="logo"><img src="images/logo.png" /></a>
+    
+<article>
+    
+        <p class="desc">
+            <strong>Welcome to Jalendar.js Documentation Page.</strong> <br />
+        Jalendar.js is premium jQuery plugin for calendar and events. You can use this plugin for show and add your events. <br />
+        <b><i>This calendar has unlimited colors, 3 languages like English, Espånol and Türkçe and two sizes.</i></b> <br />
+            You can browse the demo or download this premium plugin on CodeCanyon:
+            <br />
+            <a href="#" class="download">Download This Plugin</a>
+        </p>
+    
+    <div id="myId" class="jalendar">
+        <div class="added-event" data-date="14/12/2017" data-time="Tüm Gün" data-title="WWDC 13 on San Francisco, LA"></div>
+        <div class="added-event" data-date="16/12/2017" data-time="20:45" data-title="Tarkan İstanbul Concert on Harbiye Açık Hava Tiyatrosu"></div>
+        <div class="added-event" data-date="17/12/2017" data-time="21:00" data-title="CodeCanyon İstanbul Meeting on Starbucks, Kadıköy"></div>
+        <div class="added-event" data-date="17/12/2017" data-time="22:00" data-title="Front-End Design and Javascript Conferance on Haliç Kongre Merkezi"></div>
+        <div class="added-event" data-date="17/12/2017" data-time="22:00" data-title="Lorem ipsum dolor sit amet"></div>
+    </div>
+    
+    <section>
+        
+        <h1>Installation:</h1>
+        <p>You should add these lines in <b>&lt;head&gt;</b> tag:</p>
+        <textarea disabled="disabled" rows="3">
+    <link rel="stylesheet" href="style/jalendar.css" type="text/css" />
+            
+    <script type="text/javascript" src="js/jalendar.js"></script>
+        </textarea>
+        <p>Just one '.css' file and one '.js' file.</p>
+        
+        <hr />
+        
+        <b>HTML:</b>
+        <p>Set your <b>ID</b> and add <b>jalendar</b> class your &lt;div&gt;.</p>
+        <textarea disabled="disabled" rows="1">
+    <div id="myId" class="jalendar"></div></textarea>
+        
+        <hr />
+        
+        <b>jQuery:</b>
+        <p>Add <b>.jalendar()</b> function to your <b>ID</b> which you defined before.</p>
+        <textarea disabled="disabled" rows="1">
+    $('#myId').jalendar();</textarea>
+        
+        <hr />
+        
+        <h1>Quick View:</h1>
+        <textarea disabled="disabled" rows="19">
+    <head>
+    <link rel="stylesheet" href="style/jalendar.css" type="text/css" /><!-- Jalendar CSS -->
+        
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script><!--jQuery-->
+    <script type="text/javascript" src="js/jalendar.js"></script><!-- Jalendar JS -->
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myId').jalendar();
+        });
+    </script>
+    
+    </head>
+    
+    <body>
+    
+        <div id="myId" class="jalendar"></div>
+        
+    </body>
+        </textarea>
+        
+        <hr />
+        
+        <h1>Features:</h1>
+        
+        <p>
+            <ul>
+                <li>Live Add Event</li>
+                <li>Live Remove Event</li>
+                <li>Unlimited Colors</li>
+                <li>Support Three Language (Türkçe, Espånol and English [More Coming Soon])</li>
+                <li>One .js file for calendar and events</li>
+                <li>
+                    Used Two Google Fonts;
+                    <ul>
+                        <li>Fugaz One</li>
+                        <li>Roboto</li>
+                    </ul>
+                </li>
+                <li>You can add events you defined before</li>
+                <li>Small and medium calendar size</li>
+                <li>IE9, IE10, Firefox, Chrome, Safari, Opera Compatibility</li>
+                <li>Simple Installation</li>
+            </ul>
+        </p>
+        
+        <hr />
+        
+        <h1>More Settings:</h1>
+        
+        <p>You can change some plugin settings. You need to write those codes for this:</p>
+        <textarea disabled="disabled" rows="5">
+    customDay: '2017/12/01',  // Format: Year/Month/Day
+            
+    color: '#ed145a', // Unlimited Colors
+            
+    lang: 'ES' // 'TR', 'EN', 'ES'
+        </textarea>
+        <p>(More languages are coming soon, for now, Türkçe, English, Espånol).</p>
+        
+        <hr />
+        
+        <p>
+            If you want to show events you defines before, you should add <b>&lt;div class='added-event'&gt;&lt;/div&gt;</b> into the <b>&lt;div&gt;</b> which you wanted the events to be shown. 
+            Every line add one event. You should add some attribute like data-date, data-time and data-title to this <b>.added-event</b> div. <br/ >
+            <b>data-date</b> is shows events day. <i>(Format: Day/Month/Year)</i><br />
+            <b>data-time</b> is shows events time. <i>(Format: 20:45 or All Day|Tüm Gün|Todo El Día )</i><br />
+            <b>data-title</b> is shows events title.<br />
+        </p>
+        
+        <textarea disabled="disabled" rows="3">
+<div id="myId" class="jalendar">
+    <div class="added-event" data-date="16/8/2013" data-time="20:45" data-title="Tarkan İstanbul Concert"></div>
+</div>
+        </textarea>
+    
+        <hr />
+
+        <h1>About Plugin:</h1>    
+    
+    <p>
+        You can add event lively when you open adding panel. Events you created will prepend in your <b>.jalendar</b> div as <b>&lt;div class="added-event" data-time="20:00" data-date="23/8/2013" data-title="Lorem ipsum dolor sit amet"&gt;&lt;/div&gt;</b>. <br />
+    </p>
+        When you deleted event with using adding panel, <b>&lt;div class="added-event" data-time="20:00" data-date="23/8/2013" data-title="Lorem ipsum dolor sit amet"&gt;&lt;/div&gt;</b> wherein line deletes in your <b>.jalendar</b> div.
+    </p>
+    <p>
+        Event divs creates when you open 'adding panel'.
+    </p>
+    
+        <hr />
+        
+        <h1>Size:</h1>
+        <p>And it has two sizes. If you want little big style, you can add <b>mid</b> class to <b>.jalendar</b> div.</p>
+        <textarea disabled="disabled" rows="1">
+<div id="myId3" class="jalendar mid">
+        </textarea>
+    </section>
+    
+    <hr />
+    
+    <section>
+        <h1 style="text-align:center;">Different Colors and Languages</h1>
+    </section>
+
+<div id="myId2" class="jalendar"></div>
+    
+<div id="myId3" class="jalendar mid">
+    <div class="added-event" data-date="9/8/2013" data-time="Tüm Gün" data-title="WWDC 13 on San Francisco, LA"></div>
+    <div class="added-event" data-date="16/8/2013" data-time="20:45" data-title="Tarkan İstanbul Concert on Harbiye Açık Hava Tiyatrosu"></div>
+    <div class="added-event" data-date="17/8/2013" data-time="21:00" data-title="CodeCanyon İstanbul Meeting on Starbucks, Kadıköy"></div>
+    <div class="added-event" data-date="17/8/2013" data-time="22:00" data-title="Front-End Design and Javascript Conferance on Haliç Kongre Merkezi"></div>
+    <div class="added-event" data-date="17/12/2017" data-time="22:00" data-title="Lorem ipsum dolor sit amet"></div>
+</div>
+</article>
+</body>
+</html>
